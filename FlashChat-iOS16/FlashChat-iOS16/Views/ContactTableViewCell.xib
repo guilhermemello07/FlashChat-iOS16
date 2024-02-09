@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="ContactReusableCell" rowHeight="83" id="KGk-i7-Jjw" customClass="ContactTableViewCell" customModule="FlashChat_iOS16" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="321" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IFA-Zg-puU">
+                        <rect key="frame" x="10" y="10" width="301" height="63"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ZiL-rg-OM6">
+                                <rect key="frame" x="0.0" y="2.6666666666666643" width="60" height="58.666666666666671"/>
+                                <color key="tintColor" name="NewYellow"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="pIM-Z1-9dk"/>
+                                    <constraint firstAttribute="width" constant="60" id="pvY-Ik-q6l"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHR-mU-J8q">
+                                <rect key="frame" x="80" y="1.6666666666666643" width="221" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2EG-uV-qcQ">
+                                        <rect key="frame" x="10" y="10" width="201" height="40"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                        <color key="textColor" name="NewNavy"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="NewGray"/>
+                                <constraints>
+                                    <constraint firstItem="2EG-uV-qcQ" firstAttribute="top" secondItem="sHR-mU-J8q" secondAttribute="top" constant="10" id="11q-QC-sSx"/>
+                                    <constraint firstItem="2EG-uV-qcQ" firstAttribute="leading" secondItem="sHR-mU-J8q" secondAttribute="leading" constant="10" id="9kL-dq-EJc"/>
+                                    <constraint firstAttribute="bottom" secondItem="2EG-uV-qcQ" secondAttribute="bottom" constant="10" id="LyI-Eg-Eht"/>
+                                    <constraint firstAttribute="trailing" secondItem="2EG-uV-qcQ" secondAttribute="trailing" constant="10" id="Tdd-zx-tJm"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <color key="backgroundColor" name="NewNavy"/>
+                <constraints>
+                    <constraint firstItem="IFA-Zg-puU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="0dr-IL-vc1"/>
+                    <constraint firstAttribute="trailing" secondItem="IFA-Zg-puU" secondAttribute="trailing" constant="10" id="JEl-Pn-8v8"/>
+                    <constraint firstAttribute="bottom" secondItem="IFA-Zg-puU" secondAttribute="bottom" constant="10" id="m6l-nr-pQC"/>
+                    <constraint firstItem="IFA-Zg-puU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="rGz-XA-Sgg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="NewNavy"/>
+            <connections>
+                <outlet property="contactImageView" destination="ZiL-rg-OM6" id="YEA-sY-w8s"/>
+                <outlet property="contactLabel" destination="2EG-uV-qcQ" id="3iP-K6-GAS"/>
+                <outlet property="messageView" destination="sHR-mU-J8q" id="Rlu-zT-w9L"/>
+            </connections>
+            <point key="canvasLocation" x="32.824427480916029" y="33.450704225352112"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="person.crop.circle.fill" catalog="system" width="128" height="123"/>
+        <namedColor name="NewGray">
+            <color red="0.32199999690055847" green="0.42699998617172241" blue="0.50999999046325684" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NewNavy">
+            <color red="0.15299999713897705" green="0.21600000560283661" blue="0.30199998617172241" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="NewYellow">
+            <color red="0.9570000171661377" green="0.80800002813339233" blue="0.078000001609325409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
